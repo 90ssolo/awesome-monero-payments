@@ -114,7 +114,7 @@ for (const sec of sections) {
     md += `| **Exports** | ${item.exports} |\n`;
     md += `| **Integrations** | ${item.ecommerce_integrations.join(', ')} |\n`;
     md += `| **License** | \`${item.license}\` |\n`;
-    md += `| **Checked** | \`${item.evidence.checked_date}\` — ${item.evidence.source_urls.map(u => `[source](${u})`).join(', ')} |\n\n`;
+    md += `| **Checked** | \`${item.evidence.checked_date}\` - ${item.evidence.source_urls.map(u => `[source](${u})`).join(', ')} |\n\n`;
     if (item.evidence.notes) {
       md += `*Notes:* ${item.evidence.notes}\n\n`;
     }
@@ -148,11 +148,11 @@ flowchart TD
 ## Things worth knowing before you take Monero
 
 1. **One subaddress per order.**
-   Never match payments by amount alone—two customers can buy the same item at the same time. Give every order its own fresh subaddress (starts with \`8\` on mainnet) so you always know which order was paid.
+   Never match payments by amount alone - two customers can buy the same item at the same time. Give every order its own fresh subaddress (starts with \`8\` on mainnet) so you always know which order was paid.
 2. **Keep accounts separate and watch the lookahead gap.**
    Monero wallets group subaddresses into numbered accounts (\`0\`, \`1\`, \`2\`...) and only scan 200 unused addresses ahead of the last paid one by default. Put your payment server on its own account (for example \`PAY_ACCOUNT=1\`) so it never hands out the same address as your desktop wallet or counter till. If your shop creates hundreds of unpaid invoices in a row, raise your wallet's \`subaddress-lookahead\` when restoring from seed.
 3. **0-conf vs. confirmed payments.**
-   An unconfirmed payment (\`0-conf\`, seen in the mempool within a few seconds) is fine when a customer is standing at your counter buying a coffee. Do not use \`0-conf\` for instant digital goods (downloads, gift cards, licence keys) or large orders—wait for 1 to 10 confirmations.
+   An unconfirmed payment (\`0-conf\`, seen in the mempool within a few seconds) is fine when a customer is standing at your counter buying a coffee. Do not use \`0-conf\` for instant digital goods (downloads, gift cards, licence keys) or large orders - wait for 1 to 10 confirmations.
 4. **Refunds need an address from the customer.**
    Monero uses one-time stealth addresses, so the sender's address is never on the blockchain. You cannot "send a refund back to the address it came from." Always ask the customer for a refund address and check proof of payment first.
 

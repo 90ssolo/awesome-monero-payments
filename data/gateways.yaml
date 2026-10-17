@@ -17,7 +17,7 @@ gateways:
     view_key_control: "Merchant device only (encrypted in browser via Web Crypto AES-256-GCM; never sent to a server)"
     node_rpc_requirements: "monero-ts (WebAssembly) in browser via node relay or merchant's own monerod node (no monero-wallet-rpc required)"
     price_conversion: "Yes (25+ fiat currencies converted to XMR; rate and source recorded on each sale)"
-    invoices: "Fresh subaddress per sale; multi-till support (accounts 1–8 so up to 8 tills never reuse addresses); URL-fragment payment links (/pay#...)"
+    invoices: "Fresh subaddress per sale; multi-till support (accounts 1-8 so up to 8 tills never reuse addresses); URL-fragment payment links (/pay#...)"
     confirmation_policy: "Configurable presets: quick (0-conf up to 0.1 XMR, 1-conf up to 1 XMR, 10-conf above), standard (1-conf up to 5 XMR, 10-conf above), safe (10-conf)"
     partial_payments: "Supported (tracks amount received vs. remaining balance due and overpayments per subaddress)"
     webhooks: "Not applicable (client-side browser till and shareable payment links; see MonkStash Pay for server webhooks)"

@@ -80,14 +80,14 @@ Tools that run on a phone, tablet or computer at the counter without a backend s
 | **View key** | Merchant device only (encrypted in browser via Web Crypto AES-256-GCM; never sent to a server) |
 | **Node / wallet-RPC** | monero-ts (WebAssembly) in browser via node relay or merchant's own monerod node (no monero-wallet-rpc required) |
 | **Price conversion** | Yes (25+ fiat currencies converted to XMR; rate and source recorded on each sale) |
-| **Invoices** | Fresh subaddress per sale; multi-till support (accounts 1–8 so up to 8 tills never reuse addresses); URL-fragment payment links (/pay#...) |
+| **Invoices** | Fresh subaddress per sale; multi-till support (accounts 1-8 so up to 8 tills never reuse addresses); URL-fragment payment links (/pay#...) |
 | **Confirmations** | Configurable presets: quick (0-conf up to 0.1 XMR, 1-conf up to 1 XMR, 10-conf above), standard (1-conf up to 5 XMR, 10-conf above), safe (10-conf) |
 | **Partial payments** | Supported (tracks amount received vs. remaining balance due and overpayments per subaddress) |
 | **Webhooks** | Not applicable (client-side browser till and shareable payment links; see MonkStash Pay for server webhooks) |
 | **Exports** | Built-in client-side CSV exports for cashier sales, payment requests, and wallet history (UTF-8 BOM for spreadsheet compatibility) |
 | **Integrations** | In-person counter till (tablet/phone), Shareable invoice links (/pay# fragment) |
 | **License** | `BSD-3-Clause` |
-| **Checked** | `2026-10-17` — [source](https://github.com/90ssolo/monkstash/blob/main/README.md), [source](https://monkstash.com/monero-pos), [source](https://monkstash.com/monero-payment-link) |
+| **Checked** | `2026-10-17` - [source](https://github.com/90ssolo/monkstash/blob/main/README.md), [source](https://monkstash.com/monero-pos), [source](https://monkstash.com/monero-payment-link) |
 
 *Notes:* Payment link parameters are stored in the URL fragment (#), which browsers do not transmit to HTTP servers.
 
@@ -110,7 +110,7 @@ Tools that run on a phone, tablet or computer at the counter without a backend s
 | **Exports** | CSV transaction history export supported in Monero GUI, Feather, and Cake Wallet |
 | **Integrations** | In-person counter QR codes, Manual invoice URIs |
 | **License** | `BSD-3-Clause / Open Source` |
-| **Checked** | `2026-10-17` — [source](https://github.com/monero-project/monero/blob/master/docs/URI_SCHEME.md), [source](https://github.com/monero-project/monero-gui) |
+| **Checked** | `2026-10-17` - [source](https://github.com/monero-project/monero/blob/master/docs/URI_SCHEME.md), [source](https://github.com/monero-project/monero-gui) |
 
 *Notes:* Serves as the zero-dependency baseline for in-person merchants before adopting dedicated multi-till or automated invoice software.
 
@@ -140,7 +140,7 @@ Small servers you run yourself with a **view-only wallet**. They hand out a fres
 | **Exports** | JSON invoice store (invoices.json with automatic backup) and REST API (GET /api/invoices/:id); no separate admin export UI in v0.1 |
 | **Integrations** | WooCommerce (integrations/woocommerce in monorepo), JSON REST API (POST /api/invoices) |
 | **License** | `BSD-3-Clause` |
-| **Checked** | `2026-10-17` — [source](https://github.com/90ssolo/monkstash/blob/main/apps/pay/README.md), [source](https://monkstash.com/monero-payment-gateway), [source](https://monkstash.com/monero-woocommerce) |
+| **Checked** | `2026-10-17` - [source](https://github.com/90ssolo/monkstash/blob/main/apps/pay/README.md), [source](https://monkstash.com/monero-payment-gateway), [source](https://monkstash.com/monero-woocommerce) |
 
 *Notes:* Includes explicit subaddress lookahead gap tracking in GET /api/health and emits invoice.reverted if a 0-conf payment drops from the mempool.
 
@@ -163,7 +163,7 @@ Small servers you run yourself with a **view-only wallet**. They hand out a fres
 | **Exports** | unknown (Database-backed persistence in PostgreSQL/SQLite; no built-in CSV export endpoint documented in core API) |
 | **Integrations** | WooCommerce (community plugin), PrestaShop, REST API |
 | **License** | `AGPL-3.0` |
-| **Checked** | `2026-10-17` — [source](https://github.com/moneropay/moneropay) |
+| **Checked** | `2026-10-17` - [source](https://github.com/moneropay/moneropay) |
 
 *Notes:* Lightweight Go daemon focused strictly on mapping subaddresses to expected atomic XMR balances and firing HTTP callbacks.
 
@@ -186,7 +186,7 @@ Small servers you run yourself with a **view-only wallet**. They hand out a fres
 | **Exports** | unknown (Not explicitly documented in primary README) |
 | **Integrations** | REST API, Custom webhook storefronts |
 | **License** | `GPL-3.0` |
-| **Checked** | `2026-10-17` — [source](https://github.com/dnvie/pago) |
+| **Checked** | `2026-10-17` - [source](https://github.com/dnvie/pago) |
 
 *Notes:* Includes built-in mock payment simulation documented in its README to assist developer integration testing.
 
@@ -209,7 +209,7 @@ Small servers you run yourself with a **view-only wallet**. They hand out a fres
 | **Exports** | unknown |
 | **Integrations** | REST API, Hosted checkout view |
 | **License** | `MIT` |
-| **Checked** | `2026-10-17` — [source](https://github.com/SlowBearDigger/xmr-pay) |
+| **Checked** | `2026-10-17` - [source](https://github.com/SlowBearDigger/xmr-pay) |
 
 *Notes:* Documents Monero URI formatting and wallet compatibility behaviors.
 
@@ -232,7 +232,7 @@ Small servers you run yourself with a **view-only wallet**. They hand out a fres
 | **Exports** | CSV and JSON invoice/payment exports via BTCPay Server back-office UI and Greenfield API |
 | **Integrations** | WooCommerce, Shopify, Magento, PrestaShop, Drupal Commerce, Greenfield REST API |
 | **License** | `MIT` |
-| **Checked** | `2026-10-17` — [source](https://github.com/Kukks/BTCPayServerPlugin.Monero), [source](https://docs.btcpayserver.org/Monero/) |
+| **Checked** | `2026-10-17` - [source](https://github.com/Kukks/BTCPayServerPlugin.Monero), [source](https://docs.btcpayserver.org/Monero/) |
 
 *Notes:* Feature-complete enterprise suite, but carries higher RAM/CPU/disk overhead because it runs the full BTCPay .NET stack alongside Monero containers.
 
@@ -259,7 +259,7 @@ Plugins that run inside your shop software (such as WordPress/PHP) and libraries
 | **Exports** | Relies on standard WooCommerce order CSV exports |
 | **Integrations** | WooCommerce (monerowp), Magento, PrestaShop, OpenCart |
 | **License** | `MIT` |
-| **Checked** | `2026-10-17` — [source](https://github.com/monero-integrations/monerowp), [source](https://github.com/monero-integrations) |
+| **Checked** | `2026-10-17` - [source](https://github.com/monero-integrations/monerowp), [source](https://github.com/monero-integrations) |
 
 *Notes:* Eliminates a separate payment middleware server, though storing view keys or RPC credentials directly inside a WordPress PHP environment requires careful host hardening.
 
@@ -282,7 +282,7 @@ Plugins that run inside your shop software (such as WordPress/PHP) and libraries
 | **Exports** | Application-defined (exposes typed invoice structs via storage traits) |
 | **Integrations** | Custom Rust backends and microservices |
 | **License** | `MIT` |
-| **Checked** | `2026-10-17` — [source](https://github.com/busyboredom/acceptxmr), [source](https://docs.rs/acceptxmr/latest/acceptxmr/) |
+| **Checked** | `2026-10-17` - [source](https://github.com/busyboredom/acceptxmr), [source](https://docs.rs/acceptxmr/latest/acceptxmr/) |
 
 *Notes:* Scans transactions directly from a Monero daemon using the merchant's private view key without needing monero-wallet-rpc, and includes mock daemon utilities for testing.
 
@@ -309,7 +309,7 @@ Third-party services that run the node and checkout page for you, in exchange fo
 | **Exports** | CSV transaction history export via merchant web dashboard |
 | **Integrations** | WooCommerce, Shopify, Magento 2, PrestaShop, OpenCart, WHMCS |
 | **License** | `Proprietary SaaS (Open-source API clients & CMS plugins)` |
-| **Checked** | `2026-10-17` — [source](https://nowpayments.io/supported-coins/monero-payments), [source](https://github.com/NowPaymentsIO) |
+| **Checked** | `2026-10-17` - [source](https://nowpayments.io/supported-coins/monero-payments), [source](https://github.com/NowPaymentsIO) |
 
 *Notes:* Included as a reference benchmark for the hosted processor trust model: zero server maintenance, but introduces service fees, third-party custody during settlement, and loss of merchant/customer metadata privacy.
 
@@ -344,11 +344,11 @@ or hosted processor (NOWPayments)"]
 ## Things worth knowing before you take Monero
 
 1. **One subaddress per order.**
-   Never match payments by amount alone—two customers can buy the same item at the same time. Give every order its own fresh subaddress (starts with `8` on mainnet) so you always know which order was paid.
+   Never match payments by amount alone - two customers can buy the same item at the same time. Give every order its own fresh subaddress (starts with `8` on mainnet) so you always know which order was paid.
 2. **Keep accounts separate and watch the lookahead gap.**
    Monero wallets group subaddresses into numbered accounts (`0`, `1`, `2`...) and only scan 200 unused addresses ahead of the last paid one by default. Put your payment server on its own account (for example `PAY_ACCOUNT=1`) so it never hands out the same address as your desktop wallet or counter till. If your shop creates hundreds of unpaid invoices in a row, raise your wallet's `subaddress-lookahead` when restoring from seed.
 3. **0-conf vs. confirmed payments.**
-   An unconfirmed payment (`0-conf`, seen in the mempool within a few seconds) is fine when a customer is standing at your counter buying a coffee. Do not use `0-conf` for instant digital goods (downloads, gift cards, licence keys) or large orders—wait for 1 to 10 confirmations.
+   An unconfirmed payment (`0-conf`, seen in the mempool within a few seconds) is fine when a customer is standing at your counter buying a coffee. Do not use `0-conf` for instant digital goods (downloads, gift cards, licence keys) or large orders - wait for 1 to 10 confirmations.
 4. **Refunds need an address from the customer.**
    Monero uses one-time stealth addresses, so the sender's address is never on the blockchain. You cannot "send a refund back to the address it came from." Always ask the customer for a refund address and check proof of payment first.
 
