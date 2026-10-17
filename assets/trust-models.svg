@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 420" width="100%" height="420" role="img" aria-label="Comparison of Monero payment trust models: Browser Till, Self-Hosted Payment Server, Direct CMS Plugin, and Hosted Custodial Processor">
+  <defs>
+    <style>
+      .bg { fill: #F8FAFC; stroke: #E2E8F0; stroke-width: 1.5; }
+      .heading { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 20px; fill: #0F172A; }
+      .col-card { fill: #FFFFFF; stroke: #CBD5E1; stroke-width: 1.5; }
+      .col-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 15px; fill: #0F172A; }
+      .col-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 12px; fill: #64748B; }
+      .row-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.6px; fill: #475569; }
+      .row-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 12.5px; fill: #1E293B; }
+      .badge-good { fill: #DCFCE7; stroke: #86EFAC; stroke-width: 1; }
+      .badge-good-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 11px; fill: #166534; }
+      .badge-warn { fill: #FEF3C7; stroke: #FDE68A; stroke-width: 1; }
+      .badge-warn-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 11px; fill: #92400E; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="2" y="2" width="1096" height="416" rx="16"/>
+  <text class="heading" x="32" y="42">Monero Payment Architecture &amp; Key Custody Models</text>
+
+  <!-- Column 1: Browser Till / Payment Links -->
+  <g transform="translate(28, 64)">
+    <rect class="col-card" x="0" y="0" width="248" height="328" rx="12"/>
+    <rect x="0" y="0" width="248" height="6" rx="3" fill="#FF6600"/>
+    <text class="col-title" x="18" y="34">1. Browser Till &amp; Links</text>
+    <text class="col-sub" x="18" y="54">Counter POS, invoices, freelancers</text>
+
+    <rect class="badge-good" x="18" y="68" width="160" height="24" rx="12"/>
+    <text class="badge-good-text" x="30" y="84">Non-Custodial (Client)</text>
+
+    <text class="row-label" x="18" y="118">SPEND KEY LOCATION</text>
+    <text class="row-val" x="18" y="136">Offline / Owner wallet only</text>
+
+    <text class="row-label" x="18" y="168">VIEW KEY LOCATION</text>
+    <text class="row-val" x="18" y="186">Encrypted in merchant browser</text>
+
+    <text class="row-label" x="18" y="218">SERVER INFRASTRUCTURE</text>
+    <text class="row-val" x="18" y="236">None required (runs in browser)</text>
+
+    <text class="row-label" x="18" y="268">EXAMPLES</text>
+    <text class="row-val" x="18" y="286">MonkStash Till &amp; Payment Links,</text>
+    <text class="row-val" x="18" y="304">Feather / Cake / GUI POS</text>
+  </g>
+
+  <!-- Column 2: Self-Hosted Payment Server -->
+  <g transform="translate(292, 64)">
+    <rect class="col-card" x="0" y="0" width="248" height="328" rx="12"/>
+    <rect x="0" y="0" width="248" height="6" rx="3" fill="#10B981"/>
+    <text class="col-title" x="18" y="34">2. Self-Hosted Server</text>
+    <text class="col-sub" x="18" y="54">Online shops, automated webhooks</text>
+
+    <rect class="badge-good" x="18" y="68" width="175" height="24" rx="12"/>
+    <text class="badge-good-text" x="30" y="84">Non-Custodial (View-Only)</text>
+
+    <text class="row-label" x="18" y="118">SPEND KEY LOCATION</text>
+    <text class="row-val" x="18" y="136">Offline / Never on server</text>
+
+    <text class="row-label" x="18" y="168">VIEW KEY LOCATION</text>
+    <text class="row-val" x="18" y="186">Merchant's own VPS / container</text>
+
+    <text class="row-label" x="18" y="218">SERVER INFRASTRUCTURE</text>
+    <text class="row-val" x="18" y="236">Daemon + View-Only Engine/RPC</text>
+
+    <text class="row-label" x="18" y="268">EXAMPLES</text>
+    <text class="row-val" x="18" y="286">MonkStash Pay, MoneroPay,</text>
+    <text class="row-val" x="18" y="304">Pago, XMR-PAY, BTCPay</text>
+  </g>
+
+  <!-- Column 3: Direct CMS Plugin / Library -->
+  <g transform="translate(556, 64)">
+    <rect class="col-card" x="0" y="0" width="248" height="328" rx="12"/>
+    <rect x="0" y="0" width="248" height="6" rx="3" fill="#3B82F6"/>
+    <text class="col-title" x="18" y="34">3. Direct Plugin / Library</text>
+    <text class="col-sub" x="18" y="54">Embedded in app or CMS host</text>
+
+    <rect class="badge-good" x="18" y="68" width="175" height="24" rx="12"/>
+    <text class="badge-good-text" x="30" y="84">Non-Custodial (View-Only)</text>
+
+    <text class="row-label" x="18" y="118">SPEND KEY LOCATION</text>
+    <text class="row-val" x="18" y="136">Offline / Never on web host</text>
+
+    <text class="row-label" x="18" y="168">VIEW KEY LOCATION</text>
+    <text class="row-val" x="18" y="186">Store host or wallet-RPC host</text>
+
+    <text class="row-label" x="18" y="218">SERVER INFRASTRUCTURE</text>
+    <text class="row-val" x="18" y="236">App runtime + monero-wallet-rpc</text>
+
+    <text class="row-label" x="18" y="268">EXAMPLES</text>
+    <text class="row-val" x="18" y="286">AcceptXMR (Rust), monerowp,</text>
+    <text class="row-val" x="18" y="304">monero-ts (Node/WASM)</text>
+  </g>
+
+  <!-- Column 4: Hosted / Custodial Processor -->
+  <g transform="translate(820, 64)">
+    <rect class="col-card" x="0" y="0" width="248" height="328" rx="12"/>
+    <rect x="0" y="0" width="248" height="6" rx="3" fill="#F59E0B"/>
+    <text class="col-title" x="18" y="34">4. Hosted Processor</text>
+    <text class="col-sub" x="18" y="54">Managed third-party checkout</text>
+
+    <rect class="badge-warn" x="18" y="68" width="175" height="24" rx="12"/>
+    <text class="badge-warn-text" x="30" y="84">Custodial / Intermediary</text>
+
+    <text class="row-label" x="18" y="118">SPEND KEY LOCATION</text>
+    <text class="row-val" x="18" y="136">Held by third-party processor</text>
+
+    <text class="row-label" x="18" y="168">VIEW KEY LOCATION</text>
+    <text class="row-val" x="18" y="186">Held by third-party processor</text>
+
+    <text class="row-label" x="18" y="218">SERVER INFRASTRUCTURE</text>
+    <text class="row-val" x="18" y="236">Managed SaaS (API key only)</text>
+
+    <text class="row-label" x="18" y="268">EXAMPLES</text>
+    <text class="row-val" x="18" y="286">NOWPayments (and similar</text>
+    <text class="row-val" x="18" y="304">hosted auto-forwarders)</text>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+{
+  "name": "awesome-monero-payments",
+  "version": "1.1.0",
+  "description": "A researched, evidence-based catalogue comparing Monero (XMR) payment gateways, self-hosted checkout servers, browser tills, CMS plugins, and payment libraries.",
+  "type": "module",
+  "main": "scripts/generate-readme.mjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/90ssolo/awesome-monero-payments.git"
+  },
+  "homepage": "https://monkstash.com/business",
+  "scripts": {
+    "build": "node scripts/generate-readme.mjs",
+    "test": "node scripts/validate.mjs"
+  },
+  "keywords": [
+    "awesome",
+    "awesome-list",
+    "monero",
+    "xmr",
+    "monero-payments",
+    "monero-payment-gateway",
+    "accept-monero",
+    "cryptocurrency-payments",
+    "self-hosted",
+    "pos",
+    "point-of-sale",
+    "woocommerce",
+    "privacy-tools"
+  ],
+  "author": "MonkStash",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
